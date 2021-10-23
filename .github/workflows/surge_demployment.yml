@@ -21,4 +21,4 @@ jobs:
       - name: Install Surge
         run: npm install -g surge
       - name: Run surge
-        run: surge ./build mynewappmoixxrox2.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build mynewappmoixxrox.surge.sh --token ${{ secrets.SURGE_TOKEN }}
