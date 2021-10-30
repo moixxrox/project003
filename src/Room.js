@@ -1,12 +1,26 @@
-import React ,{ isValidElement, useState } from 'react'
-
+import React ,{useState} from 'react'
+import './Room.css'
 
 
 function Room() {
-    Set[isLit,setLit] = useState(true);
+    let [isLit,setLit] = useState(true);
+    let [Age,setAge]=useState(23);
+
+   
+    
   return (
- <div>
-   This is Room Component
+<div className={`room ${isLit ? "lit" : "dark"}`}>
+   This Room is {isLit?"Lit":"Dark"}
+   <br/>
+   Age : {Age}
+   <br/>
+   <button onClick={()=>setLit(!isLit)}>Toggle Light</button>
+   <br/>
+   <button onClick={()=>{
+
+          console.log("Arrow Function");
+          setAge(++Age)
+                }}>Increment Age</button>
  </div>
   );
 }
